@@ -9,8 +9,7 @@ describe('Basic Dice Range Tests', function () {
         const roll = d(i);
         it(`d${i} - Result should be between 1 and ${i}`, function () {
             addContext(this, `Rolled a ${roll}`);
-            expect(roll).to.be.gte(1);
-            expect(roll).to.be.lte(i);
+            expect(roll).to.be.gte(1).and.lte(i);
         });
     }
 });
@@ -20,49 +19,38 @@ describe('DiceRoller = Simple Tests', function () {
     it(`2d6 - Result should be between 2 and 12`, function () {
         let result = diceRoller.roll('2d6');
         addContext(this, diceRoller.getResultText());
-        expect(result).to.be.gte(2);
-        expect(result).to.be.lte(12);
+        expect(result).to.be.gte(2).and.lte(12);
     });
     it(`3d6 - Result should be between 3 and 18`, function () {
         let result = diceRoller.roll('3d6');
         addContext(this, diceRoller.getResultText());
-        expect(result).to.be.gte(3);
-        expect(result).to.be.lte(18);
+        expect(result).to.be.gte(3).and.lte(18);
     });
     it(`2d6+10 - Result should be between 12 and 22`, function () {
         let result = diceRoller.roll('2d6+10');
         addContext(this, diceRoller.getResultText());
-        expect(result).to.be.gte(12);
-        expect(result).to.be.lte(22);
+        expect(result).to.be.gte(12).and.lte(22);
     });
     it(`3d6+10 - Result should be between 13 and 28`, function () {
         let result = diceRoller.roll('3d6+10');
         addContext(this, diceRoller.getResultText());
-        expect(result).to.be.gte(13);
-        expect(result).to.be.lte(28);
+        expect(result).to.be.gte(13).and.lte(28);
     });
     it(`2d6+d10 - Result should be between 3 and 22`, function () {
         let result = diceRoller.roll('2d6+d10');
         addContext(this, diceRoller.getResultText());
-        expect(result).to.be.gte(3);
-        expect(result).to.be.lte(22);
+        expect(result).to.be.gte(3).and.lte(22);
     });
     it(`3D6+d10 - Result should be between 4 and 28`, function () {
-        let result = diceRoller.roll('3D6+d10', (result, error) => {
-            if (error) {
-                console.log(error);
-                return;
-            }
-        });
+        let result = diceRoller.roll('3D6+d10');
         addContext(this, diceRoller.getResultText());
-        expect(result).to.be.gte(4);
-        expect(result).to.be.lte(28);
+        expect(result).to.be.gte(4).and.lte(28);
     });
 });
 
 describe('DiceRoller - Error Handling', function () {
     const diceRoller = new DiceRoller();
-    it(`2x6 - Result should be an error`, function () {
+    it(`2x6 - Result should be an error due to invalid character`, function () {
         let result = diceRoller.roll('2x6');
         addContext(this, diceRoller.getResultText());
         expect(result).to.be.equal(0);
