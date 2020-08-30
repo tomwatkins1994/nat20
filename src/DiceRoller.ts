@@ -25,10 +25,10 @@ class DiceRoller {
         this.roll = (rollText, callback) => {
             try {
                 rollText = rollText.toLowerCase();
-                let invalidCharactes = rollText.match(/(?![dD])[A-Za-z]+/g);
-                if (invalidCharactes)
+                let invalidCharacters = rollText.match(/(?![dD])[A-Za-z]+/g);
+                if (invalidCharacters)
                     throw new Error(
-                        `Invalid characters entered: ${invalidCharactes.join(
+                        `Invalid characters entered: ${invalidCharacters.join(
                             ', ',
                         )}`,
                     );
