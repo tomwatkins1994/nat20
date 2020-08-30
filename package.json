@@ -1,5 +1,5 @@
 {
-    "name": "dice-roller",
+    "name": "nat20",
     "version": "1.0.0",
     "description": "A package for simulating dice rolls",
     "main": "dist/index.js",
