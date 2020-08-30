@@ -1,4 +1,5 @@
 import d from './utils/d';
+import math from 'mathjs';
 
 interface DiceRoller {
     roll(
@@ -62,7 +63,7 @@ class DiceRoller {
                             `[${rolls.join(',')}]`,
                         );
                     });
-                const diceRollResult = eval(resultExpression);
+                const diceRollResult = math.evaluate(resultExpression);
                 rolls = allRolls;
                 resultText = `${rollText} = ${resultDisplayText} = ${diceRollResult}`;
                 if (typeof callback === 'function')
