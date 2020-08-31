@@ -10,6 +10,6 @@
         "pretty": true,
         "noEmitOnError": true
     },
-    "include": ["src/**/*.ts"],
+    "include": ["src/**/*.ts", "index.d.ts"],
     "exclude": ["node_modules", ".vscode"]
 }
