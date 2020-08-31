@@ -1,5 +1,5 @@
 import d from './utils/d';
-import math from 'mathjs';
+import * as math from 'mathjs';
 
 interface DiceRoller {
     roll(
@@ -70,7 +70,7 @@ class DiceRoller {
                     callback({
                         value: diceRollResult,
                         rolls: allRolls,
-                        resultText: resultDisplayText,
+                        resultText: resultText,
                     });
                 return diceRollResult;
             } catch (err) {
