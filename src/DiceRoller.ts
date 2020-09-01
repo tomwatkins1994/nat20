@@ -1,7 +1,7 @@
 import d from './utils/d';
 import * as math from 'mathjs';
 
-class DiceRoller {
+export class DiceRoller {
     private rolls: number[];
     private resultText: string;
 
@@ -79,13 +79,11 @@ class DiceRoller {
         }
     }
 
-    getDiceRolls() {
+    get getDiceRolls(): number[] {
         return this.rolls;
     }
 
-    getResultText() {
+    get getResultText(): string {
         return this.resultText;
     }
 }
-
-export default DiceRoller;
