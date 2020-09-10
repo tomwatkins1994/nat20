@@ -1,8 +1,18 @@
 {
+    "author": "Tom Watkins",
     "name": "nat20",
-    "version": "1.0.6",
+    "version": "1.0.8",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tomwatkins1994/dice-roller.git"
+    },
     "description": "A package for simulating dice rolls",
     "main": "dist/index.js",
+    "files": [
+        "package.json",
+        "readme.md",
+        "dist/*"
+    ],
     "scripts": {
         "start": "node --inspect=5858 -r ts-node/register ./src/index.ts",
         "start-dev": "nodemon",
@@ -10,16 +20,11 @@
         "test:report": "mocha -r ts-node/register ./test/index.test.ts --reporter mochawesome || true",
         "build": "tsc"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/tomwatkins1994/dice-roller.git"
-    },
     "keywords": [
         "Dice",
         "Roll",
         "RPG"
     ],
-    "author": "Tom Watkins",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/tomwatkins1994/nat20/issues"
