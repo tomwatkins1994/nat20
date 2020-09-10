@@ -1,4 +1,2 @@
-import d from './utils/d';
-import DiceRoller from './DiceRoller';
-
-export { DiceRoller, d };
+export { d } from './utils/d';
+export { DiceRoller } from './DiceRoller';
