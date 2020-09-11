@@ -4,7 +4,7 @@
     "version": "1.0.9",
     "repository": {
         "type": "git",
-        "url": "https://github.com/tomwatkins1994/dice-roller.git"
+        "url": "https://github.com/tomwatkins1994/nat20.git"
     },
     "description": "A package for simulating dice rolls",
     "main": "dist/index.js",
