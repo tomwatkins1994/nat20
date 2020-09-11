@@ -25,7 +25,7 @@ export class DiceRoller {
                 resultText: string;
             },
             error?: string,
-        ) => any,
+        ) => number,
     ) {
         try {
             rollText = rollText.toLowerCase();
