@@ -25,8 +25,8 @@ export class DiceRoller {
                 resultText: string;
             },
             error?: string,
-        ) => number,
-    ) {
+        ) => any,
+    ): number {
         try {
             rollText = rollText.toLowerCase();
             let invalidCharacters = rollText.match(/(?![dD])[A-Za-z]+/g);
