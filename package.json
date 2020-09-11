@@ -1,7 +1,7 @@
 {
     "author": "Tom Watkins",
     "name": "nat20",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "repository": {
         "type": "git",
         "url": "https://github.com/tomwatkins1994/dice-roller.git"
