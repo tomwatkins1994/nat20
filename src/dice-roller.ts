@@ -29,8 +29,9 @@ export class DiceRoller {
     ) => void,
   ): number {
     try {
-      rollText = rollText.toLowerCase();
-      const invalidCharacters = rollText.match(/(?![dD])[A-Za-z]+/g);
+      const invalidCharacters = rollText
+        .toLowerCase()
+        .match(/(?![dD])[A-Za-z]+/g);
       if (invalidCharacters)
         throw new Error(
           `Invalid characters entered: ${invalidCharacters.join(", ")}`,
@@ -38,8 +39,10 @@ export class DiceRoller {
       const allRolls: number[] = [];
       let resultExpression = rollText;
       let resultDisplayText = rollText;
-      const dice = rollText.match(/(?:[0-9]+d)([0-9]+)|(?:d)([0-9]+)/g) || [];
-      dice.forEach((die) => {
+      const dice =
+        rollText.toLowerCase().match(/(?:[0-9]+d)([0-9]+)|(?:d)([0-9]+)/g) ||
+        [];
+      for (const die of dice) {
         const numRolls =
           Number.parseInt((die.match(/([0-9]+)(?=d)/g) || "").toString()) || 1;
         const maxRoll = Number.parseInt(
@@ -58,7 +61,7 @@ export class DiceRoller {
           die,
           `[${rolls.join(",")}]`,
         );
-      });
+      }
       const diceRollResult = math.evaluate(resultExpression);
       this.rolls = allRolls;
       this.resultText = `${rollText} = ${resultDisplayText} = ${diceRollResult}`;
