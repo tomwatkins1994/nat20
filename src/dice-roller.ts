@@ -72,14 +72,15 @@ export class DiceRoller {
                     resultText: this.resultText,
                 });
             return diceRollResult;
-        } catch (err) {
+        } catch (error) {
+            let errorMessage: string = 'There has been an error';
+            if (error instanceof Error) {
+                errorMessage = error.message;
+            }
             this.rolls = [];
-            this.resultText = `${rollText} - Failed to perform dice roll - ${err}`;
+            this.resultText = `${rollText} - Failed to perform dice roll - ${errorMessage}`;
             if (typeof callback === 'function')
-                callback(
-                    { value: 0, rolls: [], resultText: '' },
-                    err.toString(),
-                );
+                callback({ value: 0, rolls: [], resultText: '' }, errorMessage);
             return 0;
         }
     }
