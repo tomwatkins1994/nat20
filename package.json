@@ -30,12 +30,14 @@
         "test:ui": "vitest --ui",
         "build": "tsc",
         "format": "prettier --write ./src --ignore-path .gitignore",
-        "check-format": "prettier --check ."
+        "check-format": "prettier --check .",
+        "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm"
     },
     "dependencies": {
         "mathjs": "^13.2.1"
     },
     "devDependencies": {
+        "@arethetypeswrong/cli": "^0.17.0",
         "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
         "@types/node": "^14.6.4",
         "@vitest/ui": "^2.1.4",
