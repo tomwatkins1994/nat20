@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { d } from './d';
+import { d } from './d.js';
 
 describe('Basic Dice Range Tests', function () {
     for (let i = 1; i <= 100; i++) {

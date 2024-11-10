@@ -1,2 +1,2 @@
-export { d } from './utils/d';
-export { DiceRoller } from './dice-roller';
+export { d } from './utils/d.js';
+export { DiceRoller } from './dice-roller.js';

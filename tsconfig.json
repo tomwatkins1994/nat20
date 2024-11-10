@@ -1,28 +1,32 @@
 {
     "compilerOptions": {
-        "importHelpers": true,
-        "moduleResolution": "node",
-        "module": "commonjs",
-        "target": "es5",
-        "outDir": "dist",
-        "declaration": true,
-        "sourceMap": true,
-        "experimentalDecorators": true,
-        "noImplicitAny": true,
-        "noImplicitReturns": true,
-        "noImplicitThis": true,
-        "noUnusedLocals": true,
-        "strictNullChecks": true,
-        "strictFunctionTypes": true,
+        /* Base Options: */
+        "esModuleInterop": true,
         "skipLibCheck": true,
-        "lib": [
-            "es5",
-            "dom",
-            "es2015.promise",
-            "es2015.collection",
-            "es2015.iterable"
-        ]
+        "target": "es2022",
+        "allowJs": true,
+        "resolveJsonModule": true,
+        "moduleDetection": "force",
+        "isolatedModules": true,
+        "verbatimModuleSyntax": true,
+
+        /* Strictness */
+        "strict": true,
+        "noUncheckedIndexedAccess": true,
+        "noImplicitOverride": true,
+
+        /* TypeScript transpiling: */
+        "module": "NodeNext",
+        "rootDir": "src",
+        "outDir": "dist",
+        "sourceMap": true,
+
+        /* Library specific: */
+        "declaration": true,
+
+        /* Because we don't depend on DOM APIs: */
+        "lib": ["es2022"]
     },
-    "include": ["src/**/*.ts", "index.d.ts"],
-    "exclude": ["node_modules", ".vscode"]
+    "include": ["src"],
+    "exclude": ["dist", "**/*.test.ts"]
 }
