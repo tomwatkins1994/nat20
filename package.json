@@ -29,7 +29,8 @@
         "test": "vitest",
         "test:ui": "vitest --ui",
         "build": "tsc",
-        "format": "prettier --write ./src --ignore-path .gitignore"
+        "format": "prettier --write ./src --ignore-path .gitignore",
+        "check-format": "prettier --check ."
     },
     "dependencies": {
         "mathjs": "^13.2.1"
