@@ -43,10 +43,8 @@
     "devDependencies": {
         "@arethetypeswrong/cli": "^0.17.0",
         "@biomejs/biome": "1.9.4",
-        "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
         "@types/node": "^14.6.4",
         "@vitest/ui": "^2.1.4",
-        "prettier": "^3.3.3",
         "typescript": "^5.6.3",
         "vitest": "^2.1.4"
     }
