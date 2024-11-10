@@ -14,8 +14,8 @@
         "dist/*"
     ],
     "scripts": {
-        "test": "mocha -r ts-node/register ./test/index.test.ts",
-        "test:report": "mocha -r ts-node/register ./test/index.test.ts --reporter mochawesome || true",
+        "test": "vitest",
+        "test:ui": "vitest --ui",
         "build": "tsc"
     },
     "keywords": [
