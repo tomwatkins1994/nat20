@@ -1,4 +1,4 @@
-import { d } from './utils/d';
+import { d } from './utils/d.js';
 import * as math from 'mathjs';
 
 export class DiceRoller {
