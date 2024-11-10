@@ -44,10 +44,15 @@ describe("DiceRoller = Simple Tests", () => {
 
 describe("DiceRoller - Error Handling", () => {
 	const diceRoller = new DiceRoller();
-	test("2x6 - Result should be an error due to invalid character", () => {
+	test("2x6 - Callback - Should return an error due to invalid character", () => {
 		diceRoller.roll("2x6", (_, error) => {
 			expect(error).toBeDefined();
 			expect(error).length.is.greaterThan(0);
 		});
+	});
+	test("2x6 - No Callback - Should throw an error due to invalid character", () => {
+		expect(() => diceRoller.roll("2x6")).toThrowError(
+			"Invalid characters entered: x",
+		);
 	});
 });
