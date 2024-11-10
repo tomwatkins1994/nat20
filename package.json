@@ -38,7 +38,9 @@
         "lint:fix": "biome lint --write ./src",
         "format": "biome format --write ./src",
         "check-format": "biome format ./src",
-        "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm"
+        "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+        "local-release": "changeset version && changeset publish",
+        "prepublishOnly": "pnpm run ci"
     },
     "dependencies": {
         "mathjs": "^13.2.1"
