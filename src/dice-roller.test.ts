@@ -1,4 +1,4 @@
-import { DiceRoller } from './dice-roller';
+import { DiceRoller } from './dice-roller.js';
 import { describe, expect, test } from 'vitest';
 
 describe('DiceRoller = Simple Tests', function () {
