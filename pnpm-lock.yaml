@@ -9,12 +9,9 @@ importers:
   .:
     dependencies:
       mathjs:
-        specifier: ^7.2.0
-        version: 7.6.0
+        specifier: ^13.2.1
+        version: 13.2.1
     devDependencies:
-      '@types/mathjs':
-        specifier: ^6.0.5
-        version: 6.0.12
       '@types/node':
         specifier: ^14.6.4
         version: 14.18.63
@@ -29,6 +26,10 @@ importers:
         version: 2.1.4(@types/node@14.18.63)(@vitest/ui@2.1.4)
 
 packages:
+
+  '@babel/runtime@7.26.0':
+    resolution: {integrity: sha512-FDSOghenHTiToteC/QRlv2q3DhPZ/oOXTBoirfWNx1Cx3TMVcGWQtMMmQcSvb/JjpNeGzx8Pq/b4fKEJuWm1sw==}
+    engines: {node: '>=6.9.0'}
 
   '@esbuild/aix-ppc64@0.21.5':
     resolution: {integrity: sha512-1SDgH6ZSPTlggy1yI6+Dbkiz8xzpHJEVAlF/AM1tHPLsf5STom9rwtjE4hKAF20FfXXNTFqEYXyJNWh1GiZedQ==}
@@ -267,9 +268,6 @@ packages:
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
-  '@types/mathjs@6.0.12':
-    resolution: {integrity: sha512-bpKs8CDJ0aOiiJguywryE/U6Wre/uftJ89xhp4aCgF4oRb3Yug2VyZ87958gmSeq4WMsvWPMs2Q5TtFv+dJtaA==}
-
   '@types/node@14.18.63':
     resolution: {integrity: sha512-fAtCfv4jJg+ExtXhvCkCqUKZ+4ok/JQk01qDKhL5BDDoS3AxKXhV5/MAVUZyQnSEd2GT92fkgZl0pz0Q0AzcIQ==}
 
@@ -388,9 +386,9 @@ packages:
   magic-string@0.30.12:
     resolution: {integrity: sha512-Ea8I3sQMVXr8JhN4z+H/d8zwo+tYDgHE9+5G4Wnrwhs0gaK9fXTKx0Tw5Xwsd/bCPTTZNRAdpyzvoeORe9LYpw==}
 
-  mathjs@7.6.0:
-    resolution: {integrity: sha512-abywR28hUpKF4at5jE8Ys+Kigk40eKMT5mcBLD0/dtsqjfOLbtzd3WjlRqIopNo7oQ6FME51qph6lb8h/bhpUg==}
-    engines: {node: '>= 10'}
+  mathjs@13.2.1:
+    resolution: {integrity: sha512-HEKNV0hckO5Y4uY/KHucmQMMiXgdNUXfJ+SkExRJHLlD3f7mt4DZMJzndQOoTp/dX8ROwk4zl2xO+iq49OEliQ==}
+    engines: {node: '>= 18'}
     hasBin: true
 
   mrmime@2.0.0:
@@ -423,13 +421,16 @@ packages:
     resolution: {integrity: sha512-56rxCq7G/XfB4EkXq9Egn5GCqugWvDFjafDOThIdMBsI15iqPqR5r15TfSr1YPYeEI19YeaXMCbY6u88Y76GLQ==}
     engines: {node: ^10 || ^12 || >=14}
 
+  regenerator-runtime@0.14.1:
+    resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
+
   rollup@4.25.0:
     resolution: {integrity: sha512-uVbClXmR6wvx5R1M3Od4utyLUxrmOcEm3pAtMphn73Apq19PDtHpgZoEvqH2YnnaNUuvKmg2DgRd2Sqv+odyqg==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  seed-random@2.2.0:
-    resolution: {integrity: sha512-34EQV6AAHQGhoc0tn/96a9Fsi6v2xdqe/dMUwljGRaFOzR3EgRmECvD0O8vi8X+/uQ50LGHfkNu/Eue5TPKZkQ==}
+  seedrandom@3.0.5:
+    resolution: {integrity: sha512-8OwmbklUNzwezjGInmZ+2clQmExQPvomqjL7LFqOYqtmuxRgQYqOD3mHaU+MvZn5FLUeVxVfQjwLZW/n/JFuqg==}
 
   siginfo@2.0.0:
     resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}
@@ -477,9 +478,9 @@ packages:
     resolution: {integrity: sha512-sf4i37nQ2LBx4m3wB74y+ubopq6W/dIzXg0FDGjsYnZHVa1Da8FH853wlL2gtUhg+xJXjfk3kUZS3BRoQeoQBQ==}
     engines: {node: '>=6'}
 
-  typed-function@2.1.0:
-    resolution: {integrity: sha512-bctQIOqx2iVbWGDGPWwIm18QScpu2XRmkC19D8rQGFsjKSgteq/o1hTZvIG/wuDq8fanpBDrLkLq+aEN/6y5XQ==}
-    engines: {node: '>= 10'}
+  typed-function@4.2.1:
+    resolution: {integrity: sha512-EGjWssW7Tsk4DGfE+5yluuljS1OGYWiI1J6e8puZz9nTMM51Oug8CD5Zo4gWMsOhq5BI+1bF+rWTm4Vbj3ivRA==}
+    engines: {node: '>= 18'}
 
   typescript@5.6.3:
     resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
@@ -553,6 +554,10 @@ packages:
     hasBin: true
 
 snapshots:
+
+  '@babel/runtime@7.26.0':
+    dependencies:
+      regenerator-runtime: 0.14.1
 
   '@esbuild/aix-ppc64@0.21.5':
     optional: true
@@ -682,10 +687,6 @@ snapshots:
     optional: true
 
   '@types/estree@1.0.6': {}
-
-  '@types/mathjs@6.0.12':
-    dependencies:
-      decimal.js: 10.4.3
 
   '@types/node@14.18.63': {}
 
@@ -819,16 +820,17 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  mathjs@7.6.0:
+  mathjs@13.2.1:
     dependencies:
+      '@babel/runtime': 7.26.0
       complex.js: 2.4.2
       decimal.js: 10.4.3
       escape-latex: 1.2.0
       fraction.js: 4.3.7
       javascript-natural-sort: 0.7.1
-      seed-random: 2.2.0
+      seedrandom: 3.0.5
       tiny-emitter: 2.1.0
-      typed-function: 2.1.0
+      typed-function: 4.2.1
 
   mrmime@2.0.0: {}
 
@@ -849,6 +851,8 @@ snapshots:
       nanoid: 3.3.7
       picocolors: 1.1.1
       source-map-js: 1.2.1
+
+  regenerator-runtime@0.14.1: {}
 
   rollup@4.25.0:
     dependencies:
@@ -874,7 +878,7 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.25.0
       fsevents: 2.3.3
 
-  seed-random@2.2.0: {}
+  seedrandom@3.0.5: {}
 
   siginfo@2.0.0: {}
 
@@ -909,7 +913,7 @@ snapshots:
 
   totalist@3.0.1: {}
 
-  typed-function@2.1.0: {}
+  typed-function@4.2.1: {}
 
   typescript@5.6.3: {}
 
