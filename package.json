@@ -14,8 +14,6 @@
         "dist/*"
     ],
     "scripts": {
-        "start": "node --inspect=5858 -r ts-node/register ./src/index.ts",
-        "start-dev": "nodemon",
         "test": "mocha -r ts-node/register ./test/index.test.ts",
         "test:report": "mocha -r ts-node/register ./test/index.test.ts --reporter mochawesome || true",
         "build": "tsc"
