@@ -26,10 +26,11 @@
         "dist/*"
     ],
     "scripts": {
+        "dev": "vitest",
         "ci": "pnpm run build && pnpm run check-format && pnpm run check-exports && pnpm run test",
         "build": "tsc",
-        "test": "vitest",
-        "test:ui": "vitest --ui",
+        "test": "vitest run",
+        "test:ui": "vitest run --ui",
         "format": "prettier --write ./src --ignore-path .gitignore",
         "check-format": "prettier --check ./src",
         "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm"
