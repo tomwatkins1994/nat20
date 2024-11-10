@@ -76,7 +76,10 @@ export class DiceRoller {
             this.rolls = [];
             this.resultText = `${rollText} - Failed to perform dice roll - ${err}`;
             if (typeof callback === 'function')
-                callback({ value: 0, rolls: [], resultText: '' }, err);
+                callback(
+                    { value: 0, rolls: [], resultText: '' },
+                    err.toString(),
+                );
             return 0;
         }
     }
