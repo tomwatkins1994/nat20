@@ -1,11 +1,12 @@
-import { describe, expect, test } from 'vitest';
-import { d } from './d.js';
+import { describe, expect, test } from "vitest"
 
-describe('Basic Dice Range Tests', function () {
+import { d } from "./d.js"
+
+describe("Basic Dice Range Tests", function () {
     for (let i = 1; i <= 100; i++) {
-        const roll = d(i);
+        const roll = d(i)
         test(`d${i} - Result should be between 1 and ${i}`, function () {
-            expect(roll).to.be.gte(1).and.lte(i);
-        });
+            expect(roll).to.be.gte(1).and.lte(i)
+        })
     }
-});
+})
