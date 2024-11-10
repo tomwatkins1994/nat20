@@ -1,6 +1,7 @@
 {
     "author": "Tom Watkins",
     "name": "nat20",
+    "type": "module",
     "version": "1.0.9",
     "packageManager": "pnpm@9.11.0",
     "repository": {
