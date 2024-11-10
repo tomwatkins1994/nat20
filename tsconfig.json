@@ -27,6 +27,6 @@
         /* Because we don't depend on DOM APIs: */
         "lib": ["es2022"]
     },
-    "include": ["src/**/*.ts"],
+    "include": ["src"],
     "exclude": ["**/*.test.ts"]
 }
