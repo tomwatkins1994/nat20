@@ -41,7 +41,6 @@
         "chai": "^4.2.0",
         "mocha": "^8.1.3",
         "mochawesome": "^6.1.1",
-        "tsx": "^4.19.2",
         "typescript": "^3.9.7"
     },
     "nodemonConfig": {
