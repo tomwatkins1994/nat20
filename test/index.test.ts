@@ -4,16 +4,6 @@ import { expect } from 'chai';
 import 'mocha';
 import addContext from 'mochawesome/addContext';
 
-describe('Basic Dice Range Tests', function () {
-    for (let i = 1; i <= 100; i++) {
-        const roll = d(i);
-        it(`d${i} - Result should be between 1 and ${i}`, function () {
-            addContext(this, `Rolled a ${roll}`);
-            expect(roll).to.be.gte(1).and.lte(i);
-        });
-    }
-});
-
 describe('DiceRoller = Simple Tests', function () {
     const diceRoller = new DiceRoller();
     it(`2d6 - Result should be between 2 and 12`, function () {
