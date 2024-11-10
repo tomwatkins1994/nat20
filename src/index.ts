@@ -1,2 +1,2 @@
 export { d } from './utils/d';
-export { DiceRoller } from './DiceRoller';
+export { DiceRoller } from './dice-roller';
