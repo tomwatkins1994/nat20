@@ -15,7 +15,7 @@ export class DiceRoller {
 	 * Performs the dice roll
 	 * @param rollText defines the dice roll to perform e.g 2d6
 	 * @param callback defines a callback to perform when the dice roll is completed, passes an object with the result
-	 * @return a number representing the
+	 * @return a number representing the result
 	 */
 	roll(
 		rollText: string,
