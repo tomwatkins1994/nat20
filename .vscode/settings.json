@@ -2,8 +2,11 @@
     "emmet.includeLanguages": {
         "javascript": "javascriptreact"
     },
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "biomejs.biome",
     "editor.formatOnSave": true,
     "editor.formatOnPaste": false,
-    "typescript.tsdk": "node_modules\\typescript\\lib"
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "[typescript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    }
 }
