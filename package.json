@@ -1,14 +1,24 @@
 {
-    "author": "Tom Watkins",
     "name": "nat20",
-    "type": "module",
     "version": "1.0.9",
-    "packageManager": "pnpm@9.11.0",
+    "description": "A package for simulating dice rolls",
+    "author": "Tom Watkins",
+    "homepage": "https://github.com/tomwatkins1994/nat20#readme",
     "repository": {
         "type": "git",
         "url": "https://github.com/tomwatkins1994/nat20.git"
     },
-    "description": "A package for simulating dice rolls",
+    "license": "ISC",
+    "keywords": [
+        "Dice",
+        "Roll",
+        "RPG"
+    ],
+    "bugs": {
+        "url": "https://github.com/tomwatkins1994/nat20/issues"
+    },
+    "type": "module",
+    "packageManager": "pnpm@9.11.0",
     "main": "dist/index.js",
     "files": [
         "package.json",
@@ -20,16 +30,6 @@
         "test:ui": "vitest --ui",
         "build": "tsc"
     },
-    "keywords": [
-        "Dice",
-        "Roll",
-        "RPG"
-    ],
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/tomwatkins1994/nat20/issues"
-    },
-    "homepage": "https://github.com/tomwatkins1994/nat20#readme",
     "dependencies": {
         "mathjs": "^13.2.1"
     },
