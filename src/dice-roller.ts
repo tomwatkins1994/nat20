@@ -38,6 +38,7 @@ export class DiceRoller {
 						", ",
 					)}`,
 				);
+
 			const allRolls: number[] = [];
 			let resultExpression = rollText;
 			let resultDisplayText = rollText;
