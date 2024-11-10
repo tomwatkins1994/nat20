@@ -85,9 +85,12 @@ export class DiceRoller {
 			}
 			this.rolls = [];
 			this.resultText = `${rollText} - Failed to perform dice roll - ${errorMessage}`;
-			if (typeof callback === "function")
+			if (typeof callback === "function") {
 				callback({ value: 0, rolls: [], resultText: "" }, errorMessage);
-			return 0;
+				return 0;
+			}
+			// If no callback provided then throw the error
+			throw error;
 		}
 	}
 
