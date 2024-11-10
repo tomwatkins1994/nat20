@@ -26,11 +26,12 @@
         "dist/*"
     ],
     "scripts": {
+        "ci": "pnpm run build && pnpm run check-format && pnpm run check-exports && pnpm run test",
+        "build": "tsc",
         "test": "vitest",
         "test:ui": "vitest --ui",
-        "build": "tsc",
         "format": "prettier --write ./src --ignore-path .gitignore",
-        "check-format": "prettier --check .",
+        "check-format": "prettier --check ./src",
         "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm"
     },
     "dependencies": {
