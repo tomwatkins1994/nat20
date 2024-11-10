@@ -1,28 +1,29 @@
 {
     "compilerOptions": {
-        "importHelpers": true,
-        "moduleResolution": "node",
-        "module": "commonjs",
-        "target": "es5",
-        "outDir": "dist",
-        "declaration": true,
-        "sourceMap": true,
-        "experimentalDecorators": true,
-        "noImplicitAny": true,
-        "noImplicitReturns": true,
-        "noImplicitThis": true,
-        "noUnusedLocals": true,
-        "strictNullChecks": true,
-        "strictFunctionTypes": true,
+        /* Base Options: */
+        "esModuleInterop": true,
         "skipLibCheck": true,
-        "lib": [
-            "es5",
-            "dom",
-            "es2015.promise",
-            "es2015.collection",
-            "es2015.iterable"
-        ]
-    },
-    "include": ["src/**/*.ts", "index.d.ts"],
-    "exclude": ["node_modules", ".vscode"]
+        "target": "es2022",
+        "allowJs": true,
+        "resolveJsonModule": true,
+        "moduleDetection": "force",
+        "isolatedModules": true,
+        "verbatimModuleSyntax": true,
+
+        /* Strictness */
+        "strict": true,
+        "noUncheckedIndexedAccess": true,
+        "noImplicitOverride": true,
+
+        /* If transpiling with TypeScript: */
+        "module": "NodeNext",
+        "outDir": "dist",
+        "sourceMap": true,
+
+        /* AND if you're building for a library: */
+        "declaration": true,
+
+        /* If your code doesn't run in the DOM: */
+        "lib": ["es2022"]
+    }
 }
