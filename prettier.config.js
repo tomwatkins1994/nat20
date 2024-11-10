@@ -3,8 +3,8 @@
 
 /** @type { PrettierConfig | SortImportsConfig | TailwindConfig } */
 export const config = {
-    tabWidth: 8,
-    useTabs: true,
+    tabWidth: 4,
+    useTabs: false,
     semi: true,
     singleQuote: false,
     trailingComma: "all",
