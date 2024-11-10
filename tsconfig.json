@@ -15,16 +15,16 @@
         "noUncheckedIndexedAccess": true,
         "noImplicitOverride": true,
 
-        /* If transpiling with TypeScript: */
+        /* TypeScript transpiling: */
         "module": "NodeNext",
         "rootDir": "src",
         "outDir": "dist",
         "sourceMap": true,
 
-        /* AND if you're building for a library: */
+        /* Library specific: */
         "declaration": true,
 
-        /* If your code doesn't run in the DOM: */
+        /* Because we don't depend on DOM APIs: */
         "lib": ["es2022"]
     },
     "include": ["src/**/*.ts"],
