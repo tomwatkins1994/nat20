@@ -30,27 +30,27 @@ export class DiceRoller {
     ): number {
         try {
             rollText = rollText.toLowerCase()
-            let invalidCharacters = rollText.match(/(?![dD])[A-Za-z]+/g)
+            const invalidCharacters = rollText.match(/(?![dD])[A-Za-z]+/g)
             if (invalidCharacters)
                 throw new Error(
                     `Invalid characters entered: ${invalidCharacters.join(", ")}`,
                 )
-            let allRolls: number[] = []
+            const allRolls: number[] = []
             let resultExpression = rollText
             let resultDisplayText = rollText
-            let dice =
+            const dice =
                 rollText.match(/(?:[0-9]+d)([0-9]+)|(?:d)([0-9]+)/g) || []
             dice.forEach((die) => {
-                let numRolls =
-                    parseInt((die.match(/([0-9]+)(?=d)/g) || "").toString()) ||
+                const numRolls =
+                    Number.parseInt((die.match(/([0-9]+)(?=d)/g) || "").toString()) ||
                     1
-                let maxRoll = parseInt(
+                const maxRoll = Number.parseInt(
                     (die.match(/(?<=d)([0-9]+)/g) || "").toString(),
                 )
-                let rolls = []
+                const rolls = []
                 let total = 0
                 for (let i = 1; i <= numRolls; i++) {
-                    let result = d(maxRoll)
+                    const result = d(maxRoll)
                     total += result
                     rolls.push(result)
                     allRolls.push(result)
@@ -72,7 +72,7 @@ export class DiceRoller {
                 })
             return diceRollResult
         } catch (error) {
-            let errorMessage: string = "There has been an error"
+            let errorMessage = "There has been an error"
             if (error instanceof Error) {
                 errorMessage = error.message
             }
