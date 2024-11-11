@@ -24,7 +24,7 @@ diceRoller.roll("2a6"); // Should throw an erro due to this being an invalid exp
 // Alternatively, you can use a callback
 diceRoller.roll("d6 + 6", (result, error) => {
     // The result should be a number between 7 anad 12
-    // Tf the expression is invalid, you can access the error message here instead of it being thrown
+    // If there has been an error, you can access it here instead of it being thrown
 });
 
 // You can also simply roll a single dice, taking the number of sides as a parameter
