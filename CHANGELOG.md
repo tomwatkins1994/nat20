@@ -1,5 +1,11 @@
 # nat20
 
+## 1.2.0
+
+### Minor Changes
+
+- 8aebffc: Dice roller now throws an error on invalid expressions if no callback is provided
+
 ## 1.1.1
 
 ### Patch Changes
