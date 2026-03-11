@@ -19,11 +19,11 @@ const diceRoller = new DiceRoller();
 
 diceRoller.roll("2d6"); // Should return a number between 2 and 12
 
-diceRoller.roll("2a6"); // Should throw an erro due to this being an invalid expression
+diceRoller.roll("2a6"); // Should throw an error due to this being an invalid expression
 
 // Alternatively, you can use a callback
 diceRoller.roll("d6 + 6", (result, error) => {
-    // The result should be a number between 7 anad 12
+    // The result should be a number between 7 and 12
     // If there has been an error, you can access it here instead of it being thrown
 });
 
